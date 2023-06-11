@@ -1,4 +1,5 @@
 "use strict"
+
 function solveEquation(a, b, c) {
   let arr = [];
   let d = Math.pow(b, 2) - 4 * a * c;
@@ -23,3 +24,6 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let sum = + (payment * countMonths).toFixed(2);
   return sum;
 }
+
+
+
