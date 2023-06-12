@@ -8,7 +8,7 @@ function getArrayParams(...arr) {
     return a + b;
   });
   let avg = + ((sum / arr.length).toFixed(2));
-  return ('{ min: ' + min + ', ' + 'max: ' + max + ', ' + 'avg: ' + avg + ' }')
+  return '(' + '{ min: ' + min + ', ' + 'max: ' + max + ', ' + 'avg: ' + avg + ' }'+')'
 };
 
 function summElementsWorker(...arr) {
@@ -41,7 +41,7 @@ function differenceEvenOddWorker(...arr) {
     } else {
       sumOddElement += arr[i];
     }
-    return sumEvenElement - sumOddElement;
+    return sumOddElement - sumEvenElement;
   }
 }
 
