@@ -12,12 +12,12 @@ function getArrayParams(...arr) {
 
 function summElementsWorker(...arr) {
   let result;
-  if (!...arr) {
+  if (!arr) {
     return 0;
   }
    result = arr.reduce(function(a, b) {
     return a + b;
-  });
+  }, 0);
   return result;
 }
 
