@@ -1,8 +1,5 @@
 function getArrayParams(...arr) {
   let result;
-  if (!arr) {
-    result = 0;
-  }
   let min = Math.min(...arr);
   let max = Math.max(...arr);
   let sum = arr.reduce(function(a, b) {
@@ -15,7 +12,7 @@ function getArrayParams(...arr) {
 
 function summElementsWorker(...arr) {
   let result;
-  if (!arr) {
+  if (!...arr) {
     return 0;
   }
    result = arr.reduce(function(a, b) {
