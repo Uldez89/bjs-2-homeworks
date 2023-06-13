@@ -9,7 +9,7 @@ function getArrayParams(...arr) {
     return a + b;
   });
   let avg = + ((sum / arr.length).toFixed(2));
-  result = "'({min: ' + min + ', ' + 'max: ' + max + ', ' + 'avg: ' + avg + '})'";
+  result = ('{ min: ' + min + ', ' + 'max: ' + max + ', ' + 'avg: ' + avg + ' }');
   return result;
 };
 
@@ -29,7 +29,7 @@ function differenceMaxMinWorker(...arr) {
   if (!arr) {
     result = 0;
   }
-   result = Math.max(...arr) - Math.min(...arr);
+  result = Math.max(...arr) - Math.min(...arr);
   return result;
 }
 
