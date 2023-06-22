@@ -13,12 +13,15 @@ Student.prototype.setSubject = function (subjectName) {
     this.subject = subjectName;
 }
 
-Student.prototype.addMarks = function(...marksToAdd) {
+Student.prototype.addMarks = function (...marksToAdd) {
+    if (typeof this.marks === false || this.marks === undefined) {
+        return 0;
+    }
         this.marks = [...this.marks, ...marksToAdd];
 }
 
 Student.prototype.getAverage = function () {
-    if (typeof this.marks === false) {
+    if (typeof this.marks === false || this.marks === undefined) {
         return 0;
     }
     let result = this.marks.reduce((acc, item, index, arr) => {
