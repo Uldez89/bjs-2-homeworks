@@ -77,19 +77,19 @@ class Library {
     }
 
     findBookBy(type, value) {
-        let result = books.find(book => {
-            if (['type'] in book && book.hasOwnProperty(.['value']) {
-                return book;
-            } else {
-                return null;
-            }
-        });
-        return result;
+        let result = this.books.find(book => book[type] === value);
+        return result || null;
     }
 
     giveBookByName(bookName) {
-        // let result = books.find(book => book.name === bookName));
-        // return result || null;
+        let givingBook = this.books.find(book => book.name === bookName);
+        if (givingBook === undefined) {
+           return givingBook = null
+        } else {
+            this.books = this.books.filter(book => book.name !== bookName);
+            return givingBook;
+        }
+        
     }
 }
 
