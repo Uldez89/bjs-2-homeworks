@@ -20,7 +20,7 @@ Student.prototype.addMarks = function (...marksToAdd) {
         this.marks = [...this.marks, ...marksToAdd];
 }
 
-Student.prototype.getAverage = function () {
+Student.prototype.getAverage = function() {
     if (typeof this.marks === false || this.marks === undefined) {
         return 0;
     }
@@ -33,7 +33,7 @@ Student.prototype.getAverage = function () {
     return result;
 }
 
-Student.prototype.exclude = function (reason) {
+Student.prototype.exclude = function(reason) {
     delete this.subject;
     delete this.marks;
     this.excluded = reason;
